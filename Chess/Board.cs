@@ -6,9 +6,9 @@ namespace Chess
 {
     public class Board
     {
-        public bool IsOnLine(Cell firstCoordinate, Cell secondCoordinate)
+        public bool IsOnLine(Cell firstCell, Cell secondCell)
         {
-            if ((int)firstCoordinate.Column == (int)secondCoordinate.Column || (int)firstCoordinate.Row == (int)secondCoordinate.Row)
+            if ((int)firstCell.Column == (int)secondCell.Column || (int)firstCell.Row == (int)secondCell.Row)
             {
                 return true;
             }
@@ -18,10 +18,10 @@ namespace Chess
             }
         }
 
-        public bool IsOnDiagonal(Cell firstCoordinate, Cell secondCoordinate)
+        public bool IsOnDiagonal(Cell firstCell, Cell secondCell)
         {
-            if (((int)firstCoordinate.Column + (int)firstCoordinate.Row) == ((int)secondCoordinate.Column + (int)secondCoordinate.Row) ||
-                ((int)firstCoordinate.Column - (int)firstCoordinate.Row) == ((int)secondCoordinate.Column - (int)secondCoordinate.Row))
+            if (((int)firstCell.Column + (int)firstCell.Row) == ((int)secondCell.Column + (int)secondCell.Row) ||
+                ((int)firstCell.Column - (int)firstCell.Row) == ((int)secondCell.Column - (int)secondCell.Row))
             {
                 return true;
             }
@@ -31,9 +31,9 @@ namespace Chess
             }
         }
 
-        public void ColorDefinition(Cell coordinate)
+        public void ColorCellDefinition(Cell cell)
         {
-            if (((int)coordinate.Column + (int)coordinate.Row) % 2 == 0)
+            if (((int)cell.Column + (int)cell.Row) % 2 == 0)
             {
                 Console.WriteLine("Black");
             }

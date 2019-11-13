@@ -14,11 +14,11 @@ namespace Chess
             {
                 Board board = new Board();
 
-                Console.WriteLine("Input first coordinate:");
+                Console.WriteLine("Input first cell:");
                 char column = char.Parse(Console.ReadLine().ToUpper());
                 int row = int.Parse(Console.ReadLine());
 
-                Console.WriteLine("Input second coordinate:");
+                Console.WriteLine("Input second cell:");
                 char column2 = char.Parse(Console.ReadLine().ToUpper());
                 int row2 = int.Parse(Console.ReadLine());    
 
@@ -28,8 +28,8 @@ namespace Chess
                     Cell cell2 = new Cell(column2, row2);
                     Console.WriteLine($"Is on diagonal? {board.IsOnDiagonal(cell, cell2)}");
                     Console.WriteLine($"Is on line? {board.IsOnLine(cell, cell2)}");
-                    board.ColorDefinition(cell);
-                    board.ColorDefinition(cell2);
+                    board.ColorCellDefinition(cell);
+                    board.ColorCellDefinition(cell2);
                     break;
                 }
                 catch (NotCorrectInputException exception)
