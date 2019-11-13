@@ -26,8 +26,8 @@ namespace Chess
                 {
                     Cell cell = new Cell(column, row);
                     Cell cell2 = new Cell(column2, row2);
-
-                    Console.WriteLine(board.IsOnLine(cell, cell2));
+                    Console.WriteLine($"Is on diagonal? {board.IsOnDiagonal(cell, cell2)}");
+                    Console.WriteLine($"Is on line? {board.IsOnLine(cell, cell2)}");
                     board.ColorDefinition(cell);
                     board.ColorDefinition(cell2);
                     break;
