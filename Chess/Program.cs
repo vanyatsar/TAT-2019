@@ -20,8 +20,7 @@ namespace Chess
 
                 Console.WriteLine("Input second coordinate:");
                 char column2 = char.Parse(Console.ReadLine().ToUpper());
-                int row2 = int.Parse(Console.ReadLine());
-                
+                int row2 = int.Parse(Console.ReadLine());    
 
                 try
                 {

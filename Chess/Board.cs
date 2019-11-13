@@ -6,17 +6,27 @@ namespace Chess
 {
     public class Board
     {
-        public bool IsOnLine(Cell firstCoordinate, Cell secondCoordinate) => (int)firstCoordinate.Column == (int)secondCoordinate.Column;
+        public bool IsOnLine(Cell firstCoordinate, Cell secondCoordinate)
+        {
+            if ((int)firstCoordinate.Column == (int)secondCoordinate.Column || (int)firstCoordinate.Row == (int)secondCoordinate.Row)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         public void ColorDefinition(Cell coordinate)
         {
             if (((int)coordinate.Column + (int)coordinate.Row) % 2 == 0)
             {
-                Console.WriteLine("White");
+                Console.WriteLine("Black");
             }
             else
             {
-                Console.WriteLine("Black");
+                Console.WriteLine("White");
             }
         }
     }
