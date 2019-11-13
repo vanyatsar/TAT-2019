@@ -8,15 +8,15 @@ namespace Chess
 {
     public class Cell
     {
-        char column;
-        int row;
+        public char Column { get; private set; }
+        public int Row { get; private set; }
 
         public Cell(char column, int row)
         {
             if ((column >= 'A' && column <= 'H') && (row <= 8 && row >= 1))
             {
-                this.column = column;
-                this.row = row;
+                this.Column = column;
+                this.Row = row;
             }
             else
                 throw new NotCorrectInputException("Input your cell again!");
