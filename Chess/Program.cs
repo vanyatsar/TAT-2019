@@ -14,11 +14,11 @@ namespace Chess
             {
                 Board board = new Board();
 
-                Console.WriteLine("Input first cell:");
+                Console.WriteLine("Input first figure:");
                 char column = char.Parse(Console.ReadLine().ToUpper());
                 int row = int.Parse(Console.ReadLine());
 
-                Console.WriteLine("Input second cell:");
+                Console.WriteLine("Input second figure:");
                 char column2 = char.Parse(Console.ReadLine().ToUpper());
                 int row2 = int.Parse(Console.ReadLine());    
 
@@ -26,18 +26,19 @@ namespace Chess
                 {
                     Cell cell = new Cell(column, row);
                     Cell cell2 = new Cell(column2, row2);
-                    Console.WriteLine($"Is on diagonal? {board.IsOnDiagonal(cell, cell2)}");
-                    Console.WriteLine($"Is on line? {board.IsOnLine(cell, cell2)}");
-                    board.ColorCellDefinition(cell);
-                    board.ColorCellDefinition(cell2);
+
+                    Console.WriteLine($"Is two figures on diagonal? {board.IsOnDiagonalLine(cell, cell2)}");
+                    Console.WriteLine($"Is two figures on vertical? {board.IsOnVerticalLine(cell, cell2)}");
+                    Console.WriteLine($"Is two figures on horizontal? {board.IsOnHorizontalLine(cell, cell2)}");
+
+                    Console.WriteLine($"First figure color: {board.ColorCellDefinition(cell)}");
+                    Console.WriteLine($"Second figure color: {board.ColorCellDefinition(cell2)}");
+
                     break;
                 }
                 catch (NotCorrectInputException exception)
                 {
                     Console.WriteLine(exception.Message);
-                }
-                catch (Exception)
-                {
                 }
             }
         }

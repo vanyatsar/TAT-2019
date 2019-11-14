@@ -19,7 +19,7 @@ namespace Chess
                 this.Row = row;
             }
             else
-                throw new NotCorrectInputException("Input your cell again!");
+                throw new NotCorrectInputException("Input your cell again without russian symbols! ");
         }
     }
 }

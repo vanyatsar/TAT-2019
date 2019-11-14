@@ -6,40 +6,21 @@ namespace Chess
 {
     public class Board
     {
-        public bool IsOnLine(Cell firstCell, Cell secondCell)
-        {
-            if ((int)firstCell.Column == (int)secondCell.Column || (int)firstCell.Row == (int)secondCell.Row)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        public bool IsOnVerticalLine(Cell firstCell, Cell secondCell) => firstCell.Column == secondCell.Column;
 
-        public bool IsOnDiagonal(Cell firstCell, Cell secondCell)
-        {
-            if (((int)firstCell.Column + (int)firstCell.Row) == ((int)secondCell.Column + (int)secondCell.Row) ||
-                ((int)firstCell.Column - (int)firstCell.Row) == ((int)secondCell.Column - (int)secondCell.Row))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        public bool IsOnHorizontalLine(Cell firstCell, Cell secondCell) => firstCell.Row == secondCell.Row;
 
-        public void ColorCellDefinition(Cell cell)
+        public bool IsOnDiagonalLine(Cell firstCell, Cell secondCell) => Math.Abs(firstCell.Column - secondCell.Column) == Math.Abs(firstCell.Row - secondCell.Row);
+
+        public string ColorCellDefinition(Cell cell)
         {
-            if (((int)cell.Column + (int)cell.Row) % 2 == 0)
+            if ((cell.Column + cell.Row) % 2 == 0)
             {
-                Console.WriteLine("Black");
+                return "Black";
             }
             else
             {
-                Console.WriteLine("White");
+                return "White";
             }
         }
     }
