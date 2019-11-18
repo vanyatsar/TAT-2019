@@ -10,18 +10,9 @@ namespace Chess
 
         public bool IsOnHorizontalLine(Cell firstCell, Cell secondCell) => firstCell.Row == secondCell.Row;
 
-        public bool IsOnDiagonalLine(Cell firstCell, Cell secondCell) => Math.Abs(firstCell.Column - secondCell.Column) == Math.Abs(firstCell.Row - secondCell.Row);
+        public bool IsOnDiagonalLine(Cell firstCell, Cell secondCell) => Math.Abs(firstCell.Column - secondCell.Column) ==
+                                                                         Math.Abs(firstCell.Row - secondCell.Row);
 
-        public string ColorCellDefinition(Cell cell)
-        {
-            if ((cell.Column + cell.Row) % 2 == 0)
-            {
-                return "Black";
-            }
-            else
-            {
-                return "White";
-            }
-        }
+        public string ColorCellDefinition(Cell cell) => (cell.Column + cell.Row) % 2 == 0 ? "Black" : "White";
     }
 }
