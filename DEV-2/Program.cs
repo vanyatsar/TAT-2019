@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DEV_2
 {
@@ -10,6 +8,11 @@ namespace DEV_2
     {
         static void Main(string[] args)
         {
+            string inputString = Console.ReadLine();
+            StringManager manager = new StringManager();
+
+            manager.Testing(inputString);
+            manager.DisplayResults();    
         }
     }
 }
