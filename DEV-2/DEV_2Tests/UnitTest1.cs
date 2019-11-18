@@ -12,7 +12,7 @@ namespace DEV_2Tests
         [DataRow("", 0)]
         [DataRow("11121", 3)]
         [DataRow("11  lkjs23", 2)]
-        [DataRow("_-lskj4אכמנûכלמנ44ÎÎÎÏÔכסמנCCjhgxdYY*****", 2)]
+        [DataRow("_-lskj4אכמנûכלמנ44ÎÎÎÏÔכסמנCCjhgxdYY******", 2)]
         public void TestGetMaxNumberOfIdenticalConsecutiveDigits(string str, int expected)
         {
             Assert.AreEqual(expected, _manager.GetMaxNumberOfIdenticalConsecutiveDigits(str));
