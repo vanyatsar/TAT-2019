@@ -18,6 +18,7 @@ namespace DEV_2Tests
         {
             StringManager manager = new StringManager();
             Assert.AreEqual(0, manager.GetMaxNumberOfIdenticalConsecutiveLatinCharacters(""));
+            Assert.AreEqual(4, manager.GetMaxNumberOfIdenticalConsecutiveLatinCharacters("123123fkjhkgjhàîðïàaaaa"));
         }
 
         [TestMethod]
