@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DEV_2
 {
@@ -19,6 +18,7 @@ namespace DEV_2
             MaxNumberOfIdenticalConsecutiveLatinCharacters = GetMaxNumberOfIdenticalConsecutiveLatinCharacters(inputString);
             
         }
+
         public int GetMaxNumberOfUnequalConsecutiveCharacters(string str)
         {
             int temp = 1;
@@ -39,6 +39,7 @@ namespace DEV_2
                 {
                     temp = 1;
                 }
+
                 if (temp > maxCount)
                 {
                     maxCount = temp;
@@ -72,6 +73,7 @@ namespace DEV_2
                 {
                     temp = 1;
                 }
+
                 if (temp > maxCount)
                 {
                     maxCount = temp;
@@ -96,6 +98,7 @@ namespace DEV_2
                 {    
                     continue;
                 }
+
                 if (str[i] == str[i + 1] && (str[i] > 64 && str[i] < 91 || (str[i] > 96 && str[i] < 123)))
                 {
                     temp++;
@@ -104,6 +107,7 @@ namespace DEV_2
                 {
                     temp = 1;
                 }
+
                 if (temp > maxCount)
                 {
                     maxCount = temp;
@@ -119,6 +123,7 @@ namespace DEV_2
                 "\n" + "MaxNumberOfIdenticalConsecutiveDigits: " + MaxNumberOfIdenticalConsecutiveDigits +
                 "\n" + "MaxNumberOfIdenticalConsecutiveLatinCharacters: " + MaxNumberOfIdenticalConsecutiveLatinCharacters));
         }
+
         private bool CheckingForEmptyString(string str) => String.IsNullOrEmpty(str);
     }
 
