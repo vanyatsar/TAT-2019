@@ -14,7 +14,7 @@ namespace DEV_3
         static void Main(string[] args)
         {
             Translit translit = new Translit();
-            string testIn = "ghbdtn ";
+            string testIn = "яяя";
 
             string testOut = translit.GetTranslitString(testIn);
 

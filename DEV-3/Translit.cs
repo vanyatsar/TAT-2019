@@ -98,7 +98,7 @@ namespace DEV_3
         {
             inputString = inputString.ToUpper();
 
-            if (Validation(inputString))
+            if (!IsValid(inputString))
             {
                 throw new ArgumentException("Illegal characters in the entered string");
             }
@@ -143,10 +143,10 @@ namespace DEV_3
             return str;
         }
 
-        private bool Validation(string str) => (str.Any(x => !(x >= 'A' && x <= 'Z')) ||
-                                                str.Any(x => !(x <= 'Я' && x >= 'А')) ||
-                                                String.IsNullOrEmpty(str)) ||
-                                                (RussianSymbolsRegex.IsMatch(str) && LatinSymbolsRegex.IsMatch(str)) ?
-                                                true : false;
+        private bool IsValid(string str) => (str.Any(x => !(x >= 'A' && x <= 'Z')) ||
+                                             str.Any(x => !(x >= 'А' && x <= 'Я')) ||
+                                             String.IsNullOrEmpty(str)) ||
+                                             (RussianSymbolsRegex.IsMatch(str) && LatinSymbolsRegex.IsMatch(str)) ?
+                                             true : false;
     }
 }
