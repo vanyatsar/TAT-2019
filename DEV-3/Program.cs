@@ -13,13 +13,19 @@ namespace DEV_3
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            Translit translit = new Translit();
-            string testIn = "яяя";
-
-            string testOut = translit.GetTranslitString(testIn);
-
-            Console.WriteLine($"Source string \'{testIn}\'");
-            Console.WriteLine($"Line after transliteration \'{testOut}\'");
+            try
+            {
+                Translit translit = new Translit();
+                Console.WriteLine(translit.GetTranslitString("Hey"));
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e.Message);
+            }   
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

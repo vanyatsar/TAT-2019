@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace DEV_3
 {
@@ -10,9 +9,6 @@ namespace DEV_3
     /// </summary>
     public class Translit
     {
-        Regex RussianSymbolsRegex = new Regex(@"[а-яА-Я]+");
-        Regex LatinSymbolsRegex = new Regex(@"[a-zA-Z]+");
-
         private readonly Dictionary<string, string> _dictionaryRussianToLatin = new Dictionary<string, string>()
         {
             {"А","A"},
@@ -96,14 +92,16 @@ namespace DEV_3
         /// <returns>transliterated string</returns>
         public string GetTranslitString(string inputString)
         {
-            inputString = inputString.ToUpper();
-
-            if (!IsValid(inputString))
+            if (String.IsNullOrEmpty(inputString))
             {
-                throw new ArgumentException("Illegal characters in the entered string");
+                return inputString;
             }
-                return inputString[0] >= 'A' && inputString[0] <= 'Z' ? TranslitLatinToRussian(inputString) : 
-                                                                        TranslitRussianToLatin(inputString);
+            inputString = string.Copy(inputString.ToUpper());
+
+            IsValid(inputString);
+
+            return inputString[0] >= 'A' && inputString[0] <= 'Z' ? TranslitLatinToRussian(inputString) : 
+                                                                    TranslitRussianToLatin(inputString);
         }
 
         /// <summary>
@@ -143,10 +141,13 @@ namespace DEV_3
             return str;
         }
 
-        private bool IsValid(string str) => (str.Any(x => !(x >= 'A' && x <= 'Z')) ||
-                                             str.Any(x => !(x >= 'А' && x <= 'Я')) ||
-                                             String.IsNullOrEmpty(str)) ||
-                                             (RussianSymbolsRegex.IsMatch(str) && LatinSymbolsRegex.IsMatch(str)) ?
-                                             true : false;
+        public void IsValid(string str)
+        {
+            if (str.Any(x => x >= 'A' && x < 'Z' && (x > 1039 && x < 1072)) ||
+                str.Any(x => x < 'A' && x > 'Z' || (x < 1040 && x > 1071)))
+            {
+                throw new ArgumentException("Illegal characters in the entered string");
+            }
+        }    
     }
 }
