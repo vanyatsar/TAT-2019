@@ -1,12 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Text.RegularExpressions;
 
 namespace DEV_3
 {
+    /// <summary>
+    /// Class which transliterates string from russian to latin and backward
+    /// </summary>
     public class Translit
-    {         
+    {
+        Regex RussianSymbolsRegex = new Regex(@"[а-яА-Я]+");
+        Regex LatinSymbolsRegex = new Regex(@"[a-zA-Z]+");
+
         private readonly Dictionary<string, string> _dictionaryRussianToLatin = new Dictionary<string, string>()
         {
             {"А","A"},
@@ -83,11 +89,16 @@ namespace DEV_3
             {"YA", "Я"}
         };
 
+        /// <summary>
+        /// Method that transliterate string
+        /// </summary>
+        /// <param name="inputString">string to transliterate</param>
+        /// <returns>transliterated string</returns>
         public string GetTranslitString(string inputString)
         {
             inputString = inputString.ToUpper();
 
-            if (!Validation(inputString) || inputString.Any(x => x <= 'Я' && x >= 'А' && x >= 'A' && x <= 'Z'))
+            if (Validation(inputString))
             {
                 throw new ArgumentException("Illegal characters in the entered string");
             }
@@ -95,13 +106,23 @@ namespace DEV_3
                                                                         TranslitRussianToLatin(inputString);
         }
 
+        /// <summary>
+        /// Method that transliterate string from russian to latin
+        /// </summary>
+        /// <param name="str">string to transliterate</param>
+        /// <returns>transliterated string</returns>
         public string TranslitRussianToLatin(string str)
         {
-            string result = string.Copy(str);
+            string result = string.Copy(str); 
 
             return ReplaceSymbols(result, _dictionaryRussianToLatin);
             }
 
+        /// <summary>
+        /// Method that transliterate string from latin to russian
+        /// </summary>
+        /// <param name="str">string to transliterate</param>
+        /// <returns>transliterated string</returns>
         public string TranslitLatinToRussian(string str)
         {
             string result = string.Copy(str);
@@ -112,9 +133,9 @@ namespace DEV_3
             return result;
         }
 
-        private string ReplaceSymbols(string str, Dictionary<string, string> mapping)
+        private string ReplaceSymbols(string str, Dictionary<string, string> dictionary)
         {
-            foreach (var item in mapping)
+            foreach (var item in dictionary)
             {
                 str = str.Replace(item.Key, item.Value);
             }
@@ -122,10 +143,10 @@ namespace DEV_3
             return str;
         }
 
-
-        private bool Validation(string str) => (str.Any(x => x >= 'A' && x <= 'Z') ||
-                                                str.Any(x => x <= 'Я' && x >= 'А') ||
-                                                str.Any(x => x == 32)) ?
+        private bool Validation(string str) => (str.Any(x => !(x >= 'A' && x <= 'Z')) ||
+                                                str.Any(x => !(x <= 'Я' && x >= 'А')) ||
+                                                String.IsNullOrEmpty(str)) ||
+                                                (RussianSymbolsRegex.IsMatch(str) && LatinSymbolsRegex.IsMatch(str)) ?
                                                 true : false;
     }
 }
