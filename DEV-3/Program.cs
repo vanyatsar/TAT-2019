@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DEV_3
 {
@@ -11,9 +7,9 @@ namespace DEV_3
         static void Main(string[] args)
         {
             Translit translit = new Translit();
-            string testIn = "schyot";
+            string testIn = "schyotпри";
 
-            StringBuilder testOut = translit.GetTranslitString(testIn);
+            string testOut = translit.GetTranslitString(testIn);
 
             Console.WriteLine($"Source string \'{testIn}\'");
             Console.WriteLine($"Line after transliteration \'{testOut}\'");
