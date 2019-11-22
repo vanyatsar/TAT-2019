@@ -141,13 +141,13 @@ namespace DEV_3
             return str;
         }
 
-        public void IsValid(string str)
+        private void IsValid(string str)
         {
-            if (str.Any(x => x >= 'A' && x < 'Z' && (x > 1039 && x < 1072)) ||
-                str.Any(x => x < 'A' && x > 'Z' || (x < 1040 && x > 1071)))
+            if ((str.Any(x => (x >= 'A' && x <= 'Z')) && str.Any(x => (x <= 'Я' && x >= 'А'))) ||
+                 str.Any(x => (x < 'A' || x > 'Z')) && str.Any(x => (x > 'Я' || x < 'А')))
             {
                 throw new ArgumentException("Illegal characters in the entered string");
             }
-        }    
+        }  
     }
 }

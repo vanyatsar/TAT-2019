@@ -16,7 +16,7 @@ namespace DEV_3
             try
             {
                 Translit translit = new Translit();
-                Console.WriteLine(translit.GetTranslitString("Hey"));
+                Console.WriteLine(translit.GetTranslitString(Console.ReadLine()));
             }
             catch (ArgumentException e)
             {
