@@ -6,9 +6,9 @@ namespace DEV_5.PageObjects
 {
     public abstract class BasePage
     {
-        protected IWebDriver Driver;
+        protected IWebDriver Driver { get; }
 
-        protected WebDriverWait Wait;
+        protected WebDriverWait Wait { get; }
 
         public BasePage(IWebDriver driver)
         {
@@ -16,14 +16,8 @@ namespace DEV_5.PageObjects
             this.Wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(40));
         }
 
-        protected void WaitForElementDisplayed(IWebElement element, IWebDriver driver)
-        {
-            this.Wait.Until(x => element.Displayed ? element : null);
-        }
+        protected IWebElement GetWebElement(By locator) => Wait
+            .Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(locator));
 
-        protected void WaitForElementIsNotDisplayed(IWebElement element, IWebDriver driver)
-        {
-            this.Wait.Until(x => !element.Displayed ? element : null);
-        }
     }
 }

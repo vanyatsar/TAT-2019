@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using System;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using DEV_5.PageObjects;
 
@@ -12,10 +13,15 @@ namespace DEV_5
             const string LOGIN_PASSWORD = "verydifficult";
 
             IWebDriver driver = new ChromeDriver();
-            LoginMailPage loginPage = new LoginMailPage(driver);
+            driver.Manage().Window.Maximize();
 
-            loginPage.NavigetToLoginPage();
-            loginPage.LoginToMail(LOGIN_USERNAME, LOGIN_PASSWORD);
+            MailRuLoginPage loginPage = new MailRuLoginPage(driver);
+            loginPage.NavigateToMainPage();
+            loginPage.Login(LOGIN_USERNAME, LOGIN_PASSWORD);
+
+            MailRuMainPage mailRuMain = new MailRuMainPage(driver);
+            mailRuMain.SendMessage("ivan.tsar99@gmail.com", "hi");
+
         }
     }
 }
