@@ -1,0 +1,88 @@
+﻿{
+  "root": {
+    "universities": {
+      "university": {
+        "name": "BSU",
+        "adressID": "3",
+        "ID": "1"
+      }
+    },
+    "persons": {
+      "students": {
+        "student": [
+          {
+            "facultyID": "1",
+            "firstname": "Ivan",
+            "secondname": "Ivanov",
+            "year": "19",
+            "marks": "4 3 5 7 6"
+          },
+          {
+            "facultyID": "1",
+            "firstname": "Larry",
+            "secondname": "Page",
+            "year": "18",
+            "marks": "1 3 4 4 3"
+          }
+        ]
+      },
+      "decans": {
+        "decan": [
+          {
+            "facultyID": "1",
+            "firstname": "Bill",
+            "secondname": "Gates",
+            "year": "65",
+            "phd": "Doctor"
+          },
+          {
+            "facultyID": "2",
+            "firstname": "Stiv",
+            "secondname": "Huic",
+            "year": "45",
+            "phd": "Docent"
+          }
+        ]
+      }
+    },
+    "departments": {
+      "faculties": {
+        "faculty": [
+          {
+            "ID": "1",
+            "name": "RFiCT",
+            "adressID": "1",
+            "universityID": "1"
+          },
+          {
+            "ID": "2",
+            "name": "Huicav",
+            "adressID": "2",
+            "universityID": "1"
+          }
+        ]
+      },
+      "institutes": {
+        "institute": "\"",
+
+        "\""
+      }
+    },
+    "adresses": {
+      "adress": [
+        {
+          "ID": "2",
+          "city": "Minsk",
+          "street": "Bobruiskaya",
+          "house": "8"
+        },
+        {
+          "ID": "1",
+          "city": "Minsk",
+          "street": "Kurchatova",
+          "house": "5"
+        }
+      ]
+    }
+  }
+}

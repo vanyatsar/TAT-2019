@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <universities>
+    <university>
+      <name>BSU</name>
+      <adressID>2</adressID>
+      <ID>1</ID>
+    </university>
+    <university>
+      <name>Polesskiy</name>
+      <adressID>4</adressID>
+      <ID>2</ID>
+    </university>
+  </universities>
+
+  <persons>
+    <students>
+      <student>
+        <facultyID>1</facultyID>
+        <firstname>Ivan</firstname>
+        <secondname>Ivanov</secondname>
+        <year>19</year>
+        <marks>4 3 5 7 6</marks>
+      </student>
+      <student>
+        <facultyID>1</facultyID>
+        <firstname>Ivan</firstname>
+        <secondname>Ivanov</secondname>
+        <year>19</year>
+        <marks>4 3 5 7 6</marks>
+      </student>
+      <student>
+        <facultyID>1</facultyID>
+        <firstname>Denis</firstname>
+        <secondname>Petrov</secondname>
+        <year>18</year>
+        <marks>1 3 4 4 3</marks>
+      </student>
+      <student>
+        <facultyID>2</facultyID>
+        <firstname>Vadim</firstname>
+        <secondname>Orazaev</secondname>
+        <year>21</year>
+        <marks>1 2 3 5 6</marks>
+      </student>
+      <student>
+        <facultyID>3</facultyID>
+        <firstname>Valerii</firstname>
+        <secondname>Albertovich</secondname>
+        <year>18</year>
+        <marks>1 6 3 5 6</marks>
+      </student>
+      <student>
+        <facultyID>3</facultyID>
+        <firstname>Alexey</firstname>
+        <secondname>Diatel</secondname>
+        <year>22</year>
+        <marks>1 2 3 4 6</marks>
+      </student>
+      <student>
+        <facultyID>4</facultyID>
+        <firstname>Mihail</firstname>
+        <secondname>Tubolev</secondname>
+        <year>20</year>
+        <marks>1 5 3 5 8</marks>
+      </student>
+    </students>
+    
+    <deans>
+      <dean>
+        <facultyID>1</facultyID>
+        <firstname>Bill</firstname>
+        <secondname>Gates</secondname>
+        <year>65</year>
+        <degree>Doctor</degree>
+      </dean>
+      <dean>
+        <facultyID>2</facultyID>
+        <firstname>Stiv</firstname>
+        <secondname>Huic</secondname>
+        <year>45</year>
+        <degree>Docent</degree>
+      </dean>
+      <dean>
+        <facultyID>3</facultyID>
+        <firstname>Ivan</firstname>
+        <secondname>Tsar</secondname>
+        <year>35</year>
+        <degree>Doctor</degree>
+      </dean>
+      <dean>
+        <facultyID>4</facultyID>
+        <firstname>Anton</firstname>
+        <secondname>Pavlovich</secondname>
+        <year>46</year>
+        <degree>Doctor</degree>
+      </dean>
+    </deans>
+  </persons>
+    
+  <departments>
+    <faculties>   
+      <faculty>
+        <ID>3</ID>
+        <name>Sport</name>
+        <adressID>5</adressID>
+        <universityID>2</universityID>
+      </faculty>
+      <faculty>
+        <ID>4</ID>
+        <name>Bio</name>
+        <adressID>5</adressID>
+        <universityID>2</universityID>
+      </faculty>
+      <faculty>
+        <ID>4</ID>
+        <name>Himicheskiy</name>
+        <adressID>3</adressID>
+        <universityID>2</universityID>
+      </faculty>
+      
+      <faculty>
+        <ID>1</ID>
+        <name>RFiCT</name>
+        <adressID>1</adressID>
+        <universityID>1</universityID>
+      </faculty>
+      <faculty>
+        <ID>2</ID>
+        <name>Fpm</name>
+        <adressID>2</adressID>
+        <universityID>1</universityID>
+      </faculty>
+    </faculties>
+    <institutes>
+      <institute>
+        
+      </institute>
+    </institutes>
+  </departments>
+  
+  <adresses> 
+    <adress>
+      <ID>5</ID>
+      <city>Pinsk</city>
+      <street>Solnechnaya</street>
+      <house>55</house>
+    </adress>   
+    <adress>
+      <ID>3</ID>
+      <city>Pinsk</city>
+      <street>Pervomaiskaya</street>
+      <house>15</house>
+    </adress>
+    <adress>
+      <ID>4</ID>
+      <city>Pinsk</city>
+      <street>Lenina</street>
+      <house>15</house>
+    </adress>
+    <adress>
+      <ID>2</ID>
+      <city>Minsk</city>
+      <street>Bobruiskaya</street>
+      <house>8</house>
+    </adress>
+    <adress>
+      <ID>1</ID>
+      <city>Minsk</city>
+      <street>Kurchatova</street>
+      <house>5</house>
+    </adress>
+  </adresses>
+</root>
