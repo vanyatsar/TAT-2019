@@ -21,13 +21,13 @@ namespace NUnitTestProject
             Calculator.Initialize();
             TestInvoker = new TestInvoker(this.Calculator);
         }
-        
+
         [Test]
         public void StartPageTest()
         {
             Assert.AreEqual("Калькулятор онлайн - Calkulyator.ru", Calculator.Title);
         }
-        
+
         [TestCase("2 + 2 =", ExpectedResult = "4")]
         [TestCase("2 0 + 2 1 =", ExpectedResult = "41")]
         [TestCase("0 + 0 =", ExpectedResult = "0")]
@@ -42,7 +42,7 @@ namespace NUnitTestProject
             string actualResult = TestInvoker.GetResult(actual);
             return actualResult;
         }
-        
+
         [OneTimeTearDown]
         public void TearDown()
         {

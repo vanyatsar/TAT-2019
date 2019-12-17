@@ -1,8 +1,11 @@
-﻿namespace NUnitTestProject.PageObjectLibrary
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace NUnitTestProject.PageObjectLibrary
 {
     class TestInvoker
     {
-        private string[] ButtonsNames { get; set; } 
+        private List<string> ButtonsNames { get; set; }
         CalculatorMainPage Calculator { get; set; }
 
         /// <summary>
@@ -12,6 +15,7 @@
         public TestInvoker(CalculatorMainPage calculator)
         {
             Calculator = calculator;
+            ButtonsNames = new List<string>();
         }
 
         /// <summary>
@@ -21,8 +25,8 @@
         /// <returns>calculation result</returns>
         public string GetResult(string buttonSequence)
         {
-            ButtonsNames = null;
-            ButtonsNames = buttonSequence.Split(new char[] { ' ' });
+            //ButtonsNames = null;
+            ButtonsNames = buttonSequence.Split(new char[] { ' ' }).ToList();
 
             foreach (var buttonName in ButtonsNames)
             {

@@ -8,7 +8,7 @@ namespace NUnitTestProject.PageObjectLibrary
         /// <summary>
         /// Dictionary with web elements
         /// </summary>
-        public Dictionary<string, IWebElement> WebElements { get; private set; } = new Dictionary<string, IWebElement>();
+        public Dictionary<string, IWebElement> WebElements { get; private set; }
         /// <summary>
         /// Result web element
         /// </summary>
@@ -55,6 +55,7 @@ namespace NUnitTestProject.PageObjectLibrary
         /// <param name="driver">driver which help contact with browser</param>
         public CalculatorMainPage(IWebDriver driver) : base(driver)
         {
+            WebElements = new Dictionary<string, IWebElement>();
         }
 
         /// <summary>
