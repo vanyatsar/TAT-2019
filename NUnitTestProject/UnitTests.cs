@@ -5,7 +5,7 @@ using NUnitTestProject.PageObjectLibrary;
 
 namespace NUnitTestProject
 {
-    public class Tests
+    class Tests
     {
         private IWebDriver Driver { get; set; }
         private CalculatorMainPage Calculator { get; set; }

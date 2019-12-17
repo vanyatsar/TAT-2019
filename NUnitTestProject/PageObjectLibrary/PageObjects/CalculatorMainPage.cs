@@ -3,10 +3,19 @@ using System.Collections.Generic;
 
 namespace NUnitTestProject.PageObjectLibrary
 {
-    public class CalculatorMainPage : BasePage
+    class CalculatorMainPage : BasePage
     {
+        /// <summary>
+        /// Dictionary with web elements
+        /// </summary>
         public Dictionary<string, IWebElement> WebElements { get; private set; } = new Dictionary<string, IWebElement>();
+        /// <summary>
+        /// Result web element
+        /// </summary>
         public IWebElement ResultWebElement { get; private set; }
+        /// <summary>
+        /// Page title
+        /// </summary>
         public string Title { get; private set; }
 
         readonly Dictionary<string, By> ElementsLocators = new Dictionary<string, By>
@@ -41,16 +50,29 @@ namespace NUnitTestProject.PageObjectLibrary
             {"00>0", By.Id("nmr_6")}
         };
 
+        /// <summary>
+        /// Constructor to initialization main page
+        /// </summary>
+        /// <param name="driver">driver which help contact with browser</param>
         public CalculatorMainPage(IWebDriver driver) : base(driver)
         {
         }
 
+        /// <summary>
+        /// Go to start page
+        /// </summary>
+        /// <returns>current page instance</returns>
         public CalculatorMainPage GoToPage()
         {
             Driver.Navigate().GoToUrl("https://calkulyator.ru/");
             Title = Driver.Title;
             return this;
         }
+
+        /// <summary>
+        /// Initializes web elements dictionary 
+        /// </summary>
+        /// <returns>current page instance</returns>
         public CalculatorMainPage Initialize()
         {
             ResultWebElement = GetWebElement(By.Id("display"));
