@@ -9,7 +9,6 @@ namespace NUnitTestProject.PageObjectLibrary
     /// </summary>
     public abstract class BasePage
     {
-
         protected IWebDriver Driver { get; }
         protected WebDriverWait Wait { get; }
 

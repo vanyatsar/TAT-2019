@@ -4,6 +4,7 @@
     {
         private string[] ButtonsNames { get; set; } 
         CalculatorMainPage Calculator { get; set; }
+
         /// <summary>
         /// Initialize test invoker
         /// </summary>

@@ -17,7 +17,6 @@ namespace NUnitTestProject.PageObjectLibrary
         /// Page title
         /// </summary>
         public string Title { get; private set; }
-
         readonly Dictionary<string, By> ElementsLocators = new Dictionary<string, By>
         {
             {"+", By.Id("nmr_22")},
