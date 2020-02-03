@@ -42,6 +42,5 @@ namespace DEV_5.PageObjects
             InputDestination(email);
             TextLetter(textOfLetter);
         }
-
     }
 }
