@@ -1,8 +1,5 @@
-﻿using System;
-
-namespace University
+﻿namespace University
 {
-    [Serializable]
     public struct Adress
     {
         public string City { get; set; }

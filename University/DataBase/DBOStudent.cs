@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace University
 {
-    [Serializable]
     public class DBOStudent
     {
         public int FacultyId { get; set; }

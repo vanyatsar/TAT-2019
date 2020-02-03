@@ -2,7 +2,6 @@
 
 namespace University
 {
-    [Serializable]
     public abstract class Department
     {
         public Adress Adress { get; set; }

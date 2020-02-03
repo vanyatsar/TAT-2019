@@ -1,13 +1,12 @@
-﻿using System;
-
-namespace University
+﻿namespace University
 {
-    [Serializable]
     public class Dean : Person
     {
         public string Degree { get; set; }
 
-        public Dean() { }
+        public Dean() 
+        { 
+        }
 
         public Dean(string firstName, string lastName, int year, string degree) : base (firstName, lastName, year)
         {

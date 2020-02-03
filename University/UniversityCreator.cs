@@ -34,7 +34,8 @@ namespace University
 
         public University CreateUniversity(string name)
         {
-            University university = new University {Adress =  provider.GetUniversityAdress(name), Name = name};
+            University university = new University {Adress = provider.GetUniversityAdress(name), Name = name};
+
             foreach (Faculty faculty in provider.GetFaculties(name))
             {
                 university.AddDepartment(faculty);

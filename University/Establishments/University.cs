@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace University
 {
-    [Serializable]
     public class University
     {
         public List<Department> Departments { get; set; } = new List<Department>();
@@ -59,6 +58,7 @@ namespace University
                 Console.WriteLine(Departments[i].ToString());
             }
         }
+
         public override string ToString() => Name + " " + Adress.ToString();
     }
 }

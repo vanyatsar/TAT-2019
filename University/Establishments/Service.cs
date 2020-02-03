@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace University
+﻿namespace University
 {
     public class Service : Department
     {

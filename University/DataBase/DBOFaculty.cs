@@ -2,7 +2,6 @@
 
 namespace University
 {
-    [Serializable]
     public class DBOFaculty
     {
         public string Name { get; set; }

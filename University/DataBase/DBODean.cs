@@ -2,7 +2,6 @@
 
 namespace University
 {
-    [Serializable]
     public class DBODean
     {
         public int FacultyId { get; set; }

@@ -3,8 +3,14 @@ using System.Collections.Generic;
 
 namespace University
 { 
+    /// <summary>
+    /// Main class of the program
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// Entry point
+        /// </summary>
         static void Main(string[] args)
         {    
             UniversityCreator manager = new UniversityCreator();
@@ -22,10 +28,9 @@ namespace University
             Console.WriteLine("---------------------------------------");
             university1 = manager.CreateUniversity("Polesskiy");
             Console.WriteLine(university1.ToString());
-
             university1.ShowDepartments();
            
-           // manager.SaveUniversity(university);
+            //manager.SaveUniversity(university);
         }
     }
 }

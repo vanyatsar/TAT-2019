@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace University
 {
-    [Serializable]
     public class Faculty : Department
     {
         public delegate void Message(string message);
@@ -49,6 +48,7 @@ namespace University
                 Console.WriteLine(students[i].ToString());
             }
         }
+
         public override string ToString() => base.ToString() + " " + Dean.ToString();
     }
 }

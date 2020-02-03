@@ -2,7 +2,6 @@
 
 namespace University
 {
-    [Serializable]
     public class DBOAdress
     {
         public int Id { get; set; }

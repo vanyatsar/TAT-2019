@@ -1,11 +1,5 @@
-﻿using System;
-using System.IO;
-using System.Runtime.Serialization.Json;
-using System.Runtime.Serialization;
-
-namespace University
+﻿namespace University
 {
-    [Serializable]
     public abstract class Person
     {
         public string FirstName { get; set; }
