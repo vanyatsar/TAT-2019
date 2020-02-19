@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace University
+﻿namespace University
 {
     public abstract class Department
     {
