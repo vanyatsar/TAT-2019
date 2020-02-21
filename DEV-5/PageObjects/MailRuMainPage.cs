@@ -29,13 +29,7 @@ namespace DEV_5.PageObjects
             GetWebElement(textMessageLocator).SendKeys(text + Keys.Control + Keys.Enter);
             return this;
         }
-        /*
-        private MailRuMainPage ClickToSendButton()
-        {
-            GetWebElement(buttonSendLocator);
-            return this;
-        }
-        */
+     
         public void SendMessage(string email, string textOfLetter)
         {
             ClickToPrintButton();
