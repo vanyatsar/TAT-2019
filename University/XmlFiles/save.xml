@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<ArrayOfDBOObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DBOObject>
+    <DBOAdresses>
+      <DBOAdress>
+        <Id>5</Id>
+        <House>55</House>
+        <City>Pinsk</City>
+        <Street>Solnechnaya</Street>
+      </DBOAdress>
+      <DBOAdress>
+        <Id>3</Id>
+        <House>15</House>
+        <City>Pinsk</City>
+        <Street>Pervomaiskaya</Street>
+      </DBOAdress>
+      <DBOAdress>
+        <Id>4</Id>
+        <House>15</House>
+        <City>Pinsk</City>
+        <Street>Lenina</Street>
+      </DBOAdress>
+      <DBOAdress>
+        <Id>2</Id>
+        <House>8</House>
+        <City>Minsk</City>
+        <Street>Bobruiskaya</Street>
+      </DBOAdress>
+      <DBOAdress>
+        <Id>1</Id>
+        <House>5</House>
+        <City>Minsk</City>
+        <Street>Kurchatova</Street>
+      </DBOAdress>
+    </DBOAdresses>
+  </DBOObject>
+</ArrayOfDBOObject>
