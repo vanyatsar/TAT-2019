@@ -2,9 +2,6 @@
 
 namespace DEV_5.PageObjects
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public class MailRuLoginPage : BasePage
     {
         private readonly By usernameLocator = By.Id("mailbox:login");

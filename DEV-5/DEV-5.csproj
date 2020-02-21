@@ -59,8 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PageObjects\BasePage.cs" />
-    <Compile Include="PageObjects\ILoginable.cs" />
-    <Compile Include="PageObjects\MailManager.cs" />
     <Compile Include="PageObjects\MailRuLoginPage.cs" />
     <Compile Include="PageObjects\MailRuMainPage.cs" />
     <Compile Include="Program.cs" />
