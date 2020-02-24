@@ -36,7 +36,7 @@ namespace CW_09_12_19
             {
                 HeadNode = newNode;
                 HeadNode.NextNode = null;
-                //return;
+                return;
             }
             else
             {
@@ -62,9 +62,6 @@ namespace CW_09_12_19
             return stringBuilder.ToString();
         }
 
-        public IEnumerator GetEnumerator()
-        {
-            return new Enumerator<T>(this);
-        }
+        public IEnumerator GetEnumerator() => new Enumerator<T>(this);
     }
 }
