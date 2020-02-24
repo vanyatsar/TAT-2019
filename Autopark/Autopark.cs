@@ -18,7 +18,7 @@ namespace Autopark
             {
                 foreach (Auto auto in cars)
                 {
-                    if (!cars.Equals(auto))
+                    if (!car.Equals(auto))
                     {
                         cars.Add(car);
                         return true;

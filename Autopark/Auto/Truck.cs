@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Autopark
+﻿namespace Autopark
 {
     public class Truck : Auto
     {
-        public Truck(Chassis chassis, Engine engine, Transmission transmission) : base(chassis, engine, transmission)
-        {
+        public double Weight { get; private set; }
 
+        public Truck(Chassis chassis, Engine engine, Transmission transmission, double weight) : base(chassis, engine, transmission)
+        {
+            this.Weight = weight;
         }
         public override string ToString()
         {
-            return base.ToString(); 
+            return base.ToString() + " " + Weight; 
         }
     }
 }
